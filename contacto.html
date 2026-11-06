@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blog personal de Josué sobre Fútbol">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contacto del blog personal de Josué sobre fútbol y desarrollo personal">
     <title>Contacto | Blog de Josué</title>
 </head>
 <body>
@@ -22,31 +21,37 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Últimas publicaciones</h2>
-            <article>
-                <h3>El Rey de los Deportes</h3>
-                <p><time datetime="2026-10-22">22 de octubre de 2026</time></p>
-                <p>El fútbol es conocido como el rey de los deportes porque une a millones de personas en todo el mundo.</p>
-                <a href="articulo-1.html">Leer más</a>
-            </article>
-        </section>
-    </main>
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta sobre los artículos de fútbol o una propuesta de colaboración? Escríbeme.</p>
+        
+        <form>
+            <p>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+            </p>
+            <p>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required>
+            </p>
+            <p>
+                <label for="asunto">Asunto:</label><br>
+                <select id="asunto" name="asunto">
+                    <option>Consulta de fútbol</option>
+                    <option>Colaboración</option>
+                    <option>Otro</option>
+                </select>
+            </p>
+            <p>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea>
+            </p>
+            <p><button type="submit">Enviar</button></p>
+        </form>
 
-    <main>
-        <section>
-            <article>
-                <h3>Balón de Oro 2026</h3>
-                <p><time datetime="2026-10-26">26 de octubre de 2026</time></p>
-                <p>El Balón de Oro 2026 premió a los mejores futbolistas del mundo por su rendimiento durante la temporada 2025-2026.<br/>
-                El ganador masculino fue Harry Kane, de Inglaterra, y la ganadora femenina fue Alexia Putellas, de España.<br/>
-                La ceremonia se celebró el 26 de octubre de 2026 en Londres, Inglaterra, en el 70.º aniversario del premio.</p>
-                <a href="articulo-2.html">Leer más</a>
-            </article>
-        </section>
+        <p><a href="index.html">Volver al inicio</a></p>
     </main>
     <footer>
-        <p>&copy;2026 Josué. Todos los derechos reservados</p>
+        <p>&copy; 2026 Josué. Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
