@@ -1,0 +1,176 @@
+/* HOJA DE ESTILOS DEL BLOG PERSONAL */
+/*importar 2 fonts de google inter para texto y poppins para titulos */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap");
+/* crear variables */
+:root {
+    /* Colores */
+    --color-primario: #2563eb;         /* Azul vibrante */
+    --color-primario-oscuro: #1d4ed8;  /* Azul más oscuro para hover */
+    --color-fondo: #fefae0;            /* Gris muy claro, casi blanco */
+    --color-superficie: #ffffff;       /* Blanco puro para tarjetas o contenedores */
+    --color-texto: #0f172a;            /* Azul marino muy oscuro (mejor que negro puro) */
+    --color-texto-suave: #64748b;      /* Gris pizarra para subtítulos */
+    --color-borde: #e2e8f0;            /* Gris sutil para líneas divisorias */
+
+    /* Tipografías */
+    --fuente-texto: "Inter", system-ui, sans-serif;
+    --fuente-titulos: "Poppins", system-ui, sans-serif;
+
+    /* Medidas */
+    --ancho-contenido: 960px;
+
+    /*TARJETAS*/
+    --radio: 12px;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.8);
+    --sombra-fuerte:0 8px 20px rgba(0, 0, 0, 0.12);
+
+
+}
+
+/*correccion del calculo del tamaño de las cajas(box)*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+/*estilo para el body*/
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    line-height: 1.6;
+} 
+
+/*estilo para titulos*/
+
+h1, h2, h3{
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.75rem;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
+/*estils a los enlaces*/
+a{
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+
+}
+a:hover{
+    color: var(--color-primario-oscuro);
+    text-decoration: underline;
+}
+/*COntenido*/
+
+main{
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/*ENCABEZADO*/
+header{
+    background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+header h1 {
+    color:#fff;
+    margin: 0 0 0.5rem;
+}
+header p {
+    margin: 0 0 1.5rem;
+    opacity: 0.9;
+}
+
+/*MENU*/
+nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/**COnvertir a los enlaces en botones*/
+nav a{
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
+nav a.activo{
+    background-color: #fff;
+    color: var(--color-primario);
+}
+
+/*tarjetas*/
+.tarjetas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.tarjeta{
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta h3{
+    margin-top: 0;
+}
+.tarjeta time {
+    color: var(--color-texto-suave);
+    font-size: 0.875rem;
+}
+.tarjeta:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-fuerte);
+}
+.tarjeta .boton{
+    margin-top: auto;
+    align-self: flex-start;
+}
+.boton {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    transition: background-color 0.2s;
+}
+.boton:hover{
+    background-color: var(--color-primario-oscuro);
+    color:#fff;
+    text-decoration: none;
+}
